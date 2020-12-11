@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Flex } from '@chakra-ui/react';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Home from './components/Home';
+import Projects from './components/Projects';
+import projects from '../src/content/projects'
 
-function App() {
+
+const App = (props) => {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Flex
+      direction="column"
+      align="center"
+      m="0 auto"
+      bgImage="url('/src/content/pexels-vlad-chețan-2892619.jpg)"
+      bgPosition="center"
+      bgRepeat="no-repeat"
+      {...props}
+      id="home"
+    >
+      <Header />
+      <Home name="home" />
+      <Projects projects={projects} />
+      <Contact name="contact" />
+      <Footer />
+    </Flex>
+
+
   );
 }
 
