@@ -5,6 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, extendTheme } from "@chakra-ui/react"
 import './index.css'
+import ReactGA from 'react-ga';
+
+const trackingId = "G-EF0D63HZHD"; // Replace with your Google Analytics tracking ID
+ReactGA.initialize(trackingId);
 
 const theme = extendTheme({
   colors: {
