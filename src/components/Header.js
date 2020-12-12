@@ -6,26 +6,28 @@ import * as Scroll from 'react-scroll'
 
 const ScrollLink = Scroll.Link
 
-const MenuItem = ({ text, target }) => {
+const MenuItem = ({ text, target, toggleMenu }) => {
     return (
-        <ScrollLink to={target} smooth={true} spy={true}>
-            <Link
-                textAlign={{ base: "center" }}
-                mt={{ base: "2rem", md: "0" }}
-                mr={{ base: "0", md: "2rem" }}
-                color="brand.200"
-                _hover={{ color: "brand.500" }}
-                transition="ease-in-out 0.3s"
-                fontSize={{ base: "25px", md: "20px" }}
-            >
+
+        <Link
+            textAlign={{ base: "center" }}
+            mt={{ base: "2rem", md: "0" }}
+            mr={{ base: "0", md: "2rem" }}
+            color="brand.200"
+            _hover={{ color: "brand.500" }}
+            transition="ease-in-out 0.3s"
+            fontSize={{ base: "25px", md: "20px" }}
+
+        >
+            <ScrollLink to={target} smooth={true} spy={true} onClick={toggleMenu}>
                 {text}
-            </Link>
-        </ScrollLink>
+            </ScrollLink>
+        </Link>
     )
 }
 const Header = () => {
 
-    const [isMounted, setIsMounted] = useState(false);
+    const [, setIsMounted] = useState(false);
     const [show, setShow] = useState(false)
     const [scroll, setScroll] = useState(false)
     const scrollDir = useScrollDirection('down')
@@ -89,9 +91,9 @@ const Header = () => {
                     h={{ base: "100vh", md: "auto" }}
                     flexDirection={{ base: "column", md: "row" }}
                 >
-                    <MenuItem target={"home"} text="Home" />
-                    <MenuItem target={"projects"} text="Projects" />
-                    <MenuItem target={"contact"} text="Contact" />
+                    <MenuItem toggleMenu={toggleMenu} target={"home"} text="Home" />
+                    <MenuItem toggleMenu={toggleMenu} target={"projects"} text="Projects" />
+                    <MenuItem toggleMenu={toggleMenu} target={"contact"} text="Contact" />
                 </Flex>
                 <Box display={{ base: "block", md: "none" }} onClick={toggleMenu}>
                     {show ? <CloseIcon color="brand.500" /> : <HamburgerIcon color="brand.500" />}

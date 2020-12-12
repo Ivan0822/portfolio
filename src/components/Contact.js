@@ -1,4 +1,4 @@
-import { Flex, Heading, Box, Icon, Link, Divider } from '@chakra-ui/react'
+import { Flex, Heading, Box, Icon, Link, Divider, Text } from '@chakra-ui/react'
 import React from 'react'
 import { AiFillGithub, AiFillLinkedin, AiFillMail } from 'react-icons/ai'
 
@@ -7,7 +7,7 @@ const Contact = () => {
 
 
     return (
-        <Box id="contact" h="73vh" w={{ base: "80%", md: "60%" }} color="brand.200" mt="10rem">
+        <Box id="contact" h="80vh" w={{ base: "80%", md: "60%" }} color="brand.200" mt="10rem">
             <Heading>Get in touch<Divider mt="1rem" /></Heading>
             <Flex pt="10rem" m="auto" w={{ base: "80%", md: "50%" }} flexDirection="column" alignItems="center">
                 <Heading textAlign="center">If you've got any questions, feel free to contact me!</Heading>
@@ -46,6 +46,9 @@ const Contact = () => {
                         />
                     </Link>
                 </Flex>
+            </Flex>
+            <Flex w="100%" h="7vh" mt="11rem" bg="brand.900" alignItems="center" justifyContent="center" >
+                <Text color="brand.200">&copy; Copyright {new Date().getFullYear()} Ivan Banovacki</Text>
             </Flex>
         </Box >
     )
