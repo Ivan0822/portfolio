@@ -21,7 +21,10 @@ const Home = () => {
                 textAlign="center"
                 lineHeight={{ base: "4rem", lg: "5rem" }}
                 fontSize={{ base: "35px", md: "40px", lg: "45px" }}
-                color="brand.200">Hello, my name is
+                color="brand.200"
+                data-aos="zoom-in"
+            >
+                Hello, my name is
             <span style={{ color: "#66fcf1" }}> Ivan Banovacki</span>
                 <p>I'm front-end developer based in Belgrade, Serbia</p>
             </Heading>
@@ -36,7 +39,6 @@ const Home = () => {
                     borderColor="brand.500"
                     color="brand.500"
                     zIndex="1"
-
                 >
                     Get in touch</Button>
             </ScrollLink>

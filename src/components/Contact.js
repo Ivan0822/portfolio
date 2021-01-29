@@ -9,11 +9,11 @@ const Contact = () => {
     return (
         <Box id="contact" h="80vh" w={{ base: "80%", md: "60%" }} color="brand.200" mt="10rem">
             <Heading>Get in touch<Divider mt="1rem" /></Heading>
-            <Flex pt="10rem" m="auto" w={{ base: "80%", md: "50%" }} flexDirection="column" alignItems="center">
-                <Heading textAlign="center">If you've got any questions, feel free to contact me!</Heading>
+            <Flex pt="10rem" m="auto" w={{ base: "80%", md: "50%" }} flexDirection="column" alignItems="center" data-aos="fade-up">
+                <Heading textAlign="center" >If you've got any questions, feel free to contact me!</Heading>
                 <Flex mt="5rem">
                     <Box>
-                        <Link href='https://github.com/Ivan0822' isExternal>
+                        <Link href='https://github.com/IvanBanovacki' isExternal>
                             <Icon
                                 w={{ base: "80px", md: "100px" }}
                                 h={{ base: "80px", md: "100px" }}

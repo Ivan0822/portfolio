@@ -1,5 +1,6 @@
 import image1 from '../content/sortingVisualizer.png'
 import image2 from '../content/teslaEats.png'
+import image3 from '../content/gamayun.png'
 
 const projects = [
     {
@@ -17,7 +18,15 @@ const projects = [
         img: image2,
         linkGithub: 'https://github.com/nebojsa91markovic/hungryHerceg',
         linkDemo: 'https://teslaeats.netlify.app/'
-    }
+    },
+    {
+        name: 'Gamayun',
+        desc: 'A virtual trivia board game made for the Mintbean JS Hacks hackathon in which we implemented socket.io to create a multiplayer game.',
+        tags: ["React", "ChakraUI", "socket.io", "Firebase"],
+        img: image3,
+        linkGithub: 'https://github.com/nebojsa91markovic/gamayun-trivia-boardgame',
+        linkDemo: 'https://gamayun-trivia-boardgame.herokuapp.com/'
+    },
 ]
 
 export default projects

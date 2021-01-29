@@ -3,11 +3,15 @@ import Contact from './components/Contact';
 import Header from './components/Header';
 import Home from './components/Home';
 import Projects from './components/Projects';
-import projects from '../src/content/projects'
+import projects from '../src/content/projects';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const App = (props) => {
 
+
+  AOS.init()
 
   return (
 

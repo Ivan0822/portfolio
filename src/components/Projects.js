@@ -13,6 +13,7 @@ const ProjectItem = ({ project }) => {
             width="100%" m="auto"
             flexDirection={{ base: "column", md: "row" }}
             alignItems={{ base: "center", md: "auto" }}
+            data-aos="fade-up"
         >
             <Box
                 w={{ base: "100%", md: "50%" }}
